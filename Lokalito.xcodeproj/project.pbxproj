@@ -13,6 +13,8 @@
 		20D944572AF5D1A5005E90B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D944552AF5D1A5005E90B9 /* Main.storyboard */; };
 		20D944592AF5D1A6005E90B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D944582AF5D1A6005E90B9 /* Assets.xcassets */; };
 		20D9445C2AF5D1A6005E90B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D9445A2AF5D1A6005E90B9 /* LaunchScreen.storyboard */; };
+		20D9447F2AF5D665005E90B9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 20D9447E2AF5D665005E90B9 /* RxSwift */; };
+		20D944822AF5D6A9005E90B9 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 20D944812AF5D6A9005E90B9 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20D944822AF5D6A9005E90B9 /* SDWebImage in Frameworks */,
+				20D9447F2AF5D665005E90B9 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,10 @@
 			dependencies = (
 			);
 			name = Lokalito;
+			packageProductDependencies = (
+				20D9447E2AF5D665005E90B9 /* RxSwift */,
+				20D944812AF5D6A9005E90B9 /* SDWebImage */,
+			);
 			productName = Lokalito;
 			productReference = 20D9444C2AF5D1A5005E90B9 /* Lokalito.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,10 @@
 				Base,
 			);
 			mainGroup = 20D944432AF5D1A4005E90B9;
+			packageReferences = (
+				20D9447D2AF5D665005E90B9 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				20D944802AF5D6A9005E90B9 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 20D9444D2AF5D1A5005E90B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -297,15 +309,18 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = parduh.Lokalito;
+				PRODUCT_BUNDLE_IDENTIFIER = parduh.lokalito;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -324,15 +339,18 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = parduh.Lokalito;
+				PRODUCT_BUNDLE_IDENTIFIER = parduh.lokalito;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -361,6 +379,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		20D9447D2AF5D665005E90B9 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.6.0;
+			};
+		};
+		20D944802AF5D6A9005E90B9 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.18.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		20D9447E2AF5D665005E90B9 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20D9447D2AF5D665005E90B9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		20D944812AF5D6A9005E90B9 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20D944802AF5D6A9005E90B9 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 20D944442AF5D1A4005E90B9 /* Project object */;
 }
